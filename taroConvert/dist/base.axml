@@ -1,0 +1,46 @@
+<import-sjs name="xs" from="./utils.sjs" />
+<template name="taro_tmpl">
+  <block a:for="{{root.cn}}" a:key="uid">
+    <template is="tmpl_0_container" data="{{i:item}}" />
+  </block>
+</template>
+
+<template name="tmpl_0_catch-view">
+  <view hover-class="{{xs.b(i.hoverClass,'none')}}" hover-stop-propagation="{{xs.b(i.hoverStopPropagation,false)}}" hover-start-time="{{xs.b(i.hoverStartTime,50)}}" hover-stay-time="{{xs.b(i.hoverStayTime,400)}}" animation="{{i.animation}}" onTouchStart="eh" onTouchEnd="eh" onTouchCancel="eh" onLongTap="eh" onAnimationStart="eh" onAnimationIteration="eh" onAnimationEnd="eh" onTransitionEnd="eh" disable-scroll="{{xs.b(i.disableScroll,false)}}" hidden="{{xs.b(i.hidden,false)}}" onAppear="eh" onDisappear="eh" onFirstAppear="eh" style="{{i.st}}" class="{{i.cl}}" onTap="eh" catchTouchMove="eh"  id="{{i.uid}}">
+    <block a:for="{{i.cn}}" a:key="uid">
+      <template is="{{xs.e(0)}}" data="{{i:item}}" />
+    </block>
+  </view>
+</template>
+
+<template name="tmpl_0_view">
+  <view hover-class="{{xs.b(i.hoverClass,'none')}}" hover-stop-propagation="{{xs.b(i.hoverStopPropagation,false)}}" hover-start-time="{{xs.b(i.hoverStartTime,50)}}" hover-stay-time="{{xs.b(i.hoverStayTime,400)}}" animation="{{i.animation}}" onTouchStart="eh" onTouchMove="eh" onTouchEnd="eh" onTouchCancel="eh" onLongTap="eh" onAnimationStart="eh" onAnimationIteration="eh" onAnimationEnd="eh" onTransitionEnd="eh" disable-scroll="{{xs.b(i.disableScroll,false)}}" hidden="{{xs.b(i.hidden,false)}}" onAppear="eh" onDisappear="eh" onFirstAppear="eh" style="{{i.st}}" class="{{i.cl}}" onTap="eh"  id="{{i.uid}}">
+    <block a:for="{{i.cn}}" a:key="uid">
+      <template is="{{xs.e(0)}}" data="{{i:item}}" />
+    </block>
+  </view>
+</template>
+
+<template name="tmpl_0_scroll-view">
+  <scroll-view scroll-x="{{xs.b(i.scrollX,false)}}" scroll-y="{{xs.b(i.scrollY,false)}}" upper-threshold="{{xs.b(i.upperThreshold,50)}}" lower-threshold="{{xs.b(i.lowerThreshold,50)}}" scroll-top="{{i.scrollTop}}" scroll-left="{{i.scrollLeft}}" scroll-into-view="{{i.scrollIntoView}}" scroll-with-animation="{{xs.b(i.scrollWithAnimation,false)}}" enable-back-to-top="{{xs.b(i.enableBackToTop,false)}}" onScrollToUpper="eh" onScrollToLower="eh" onScroll="eh" onTouchStart="eh" onTouchMove="eh" onTouchEnd="eh" onTouchCancel="eh" onLongTap="eh" onAnimationStart="eh" onAnimationIteration="eh" onAnimationEnd="eh" onTransitionEnd="eh" scroll-animation-duration="{{i.scrollAnimationDuration}}" trap-scroll="{{xs.b(i.trapScroll,false)}}" style="{{i.st}}" class="{{i.cl}}" onTap="eh"  id="{{i.uid}}">
+    <block a:for="{{i.cn}}" a:key="uid">
+      <template is="{{xs.e(0)}}" data="{{i:item}}" />
+    </block>
+  </scroll-view>
+</template>
+
+<template name="tmpl_0_image">
+  <image src="{{i.src}}" mode="{{xs.b(i.mode,'scaleToFill')}}" lazy-load="{{xs.b(i.lazyLoad,false)}}" onError="eh" onLoad="eh" onTouchStart="eh" onTouchMove="eh" onTouchEnd="eh" onTouchCancel="eh" onLongTap="eh" default-source="{{i.defaultSource}}" style="{{i.st}}" class="{{i.cl}}" onTap="eh"  id="{{i.uid}}">
+    <block a:for="{{i.cn}}" a:key="uid">
+      <template is="{{xs.e(0)}}" data="{{i:item}}" />
+    </block>
+  </image>
+</template>
+
+<template name="tmpl_0_#text" data="{{i:i}}">
+  <block>{{i.v}}</block>
+</template>
+
+<template name="tmpl_0_container">
+  <template is="{{xs.a(0, i.nn)}}" data="{{i:i}}" />
+</template>
